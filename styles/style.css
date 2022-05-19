@@ -1,0 +1,22 @@
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: normal;
+    background-image: url('../images/background.jpg') !important;
+    color: #0f1891; }
+   
+/*navbar*/
+
+img.login{
+    width: 50px !important;
+    height: 50px;
+    border-radius: 25%;
+}
+
+th{
+    color: #0f1891 !important;
+
+}
+
