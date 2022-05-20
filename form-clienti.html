@@ -128,63 +128,57 @@
 
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
   <div class="btn-group me-2 ms-3" role="group" aria-label="First group">
-    <button id="inserisciCliente" type="button" class="btn btn-secondary"><a style="text-decoration: none; color: white" href="form-clienti.html">Inserisci Cliente</a></button>
-    <button id="rimuoviCliente" type="button" class="btn btn-secondary">Rimuovi Cliente</button>
-    <button id="listaClienti" type="button" class="btn btn-secondary">Lista Clienti</button>
-    <button id="filtraperID" type="button" class="btn btn-secondary">Filtra per ID</button>
+    <button id="inserisciCliente" type="button" class="btn btn-secondary">Inserisci Cliente</button>
+    <button id="rimuoviCliente" type="button" class="btn btn-secondary" disabled>Rimuovi Cliente</button>
+    <button id="listaClienti" type="button" class="btn btn-secondary" disabled>Lista Clienti</button>
+    <button id="filtraperID" type="button" class="btn btn-secondary" disabled>Filtra per ID</button>
   </div>
 
-<!-- Tabella Clienti --> 
+<!-- Form Inserimento Clienti --> 
 
-<div class="table-responsive-lg w-100">
+<div class="container-fluid w-75 pt-5 ps-3 pb-5">
+       
+    <form id="form-clienti" class="text-primary border border-primary rounded p-3" style="background-color:rgba(255, 255, 255, 0.644); box-shadow: 2px 2px 3px 1px #343a4b71">
+        <h3>Inserisci nuovo Cliente</h3>
+        <div class="row">
 
-  <table class="text-center table table-hover mt-2 ms-1"  style="background-color: rgba(255, 255, 255, 0.699); max-width: 1850px">
-    <thead>
-      <tr class="bg-light">
-        <th scope="col"><input class="btn btn-outline-secondary btn-sm" type="button" onclick="selects()" value="Select All"/>
-                        <input class="btn btn-outline-secondary btn-sm" type="button" onclick='deSelect()' value="Deselect All"/></th>
-        <th scope="col">id</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Cognome</th>
-        <th scope="col">Email</th>
-        <th scope="col">Password</th>
-        <th scope="col">Indirizzo</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><input type="checkbox" name="checkbox" /></td>
-        <th scope="row">1</th>
-        <td>Mario</td>
-        <td>Rossi</td>
-        <td>mariorossi@mail.com</td>
-        <td>1234</td>
-        <td>Via Vai, 87</td>
-        <td><input id="delete" type="image" src="images/trash.png" style="width: 30px;"/></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" name="checkbox" /></td>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>jacobth@mail.com</td>
-        <td>onetwothree</td>
-        <td>Go Street, 55</td>
-        <td><input  id="delete" type="image" src="images/trash.png" style="width: 30px;"/></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" name="checkbox"/></td>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>Bird</td>
-        <td>larrythebird@mail.com</td>
-        <td>cipcip</td>
-        <td>Via Dei Pulcini, 11</td>
-        <td><input  id="delete" type="image" src="images/trash.png" style="width: 30px;"/></td>
-      </tr>
-    </tbody>
-  </table>
+        <div class="col mb-3">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" >
+        </div>
+        <div class="col mb-3">
+            <label class="form-label">Cognome</label>
+            <input type="text" class="form-control" id="cognome" >
+        </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">La tua email è al sicuro con noi.</div>
+        </div>
+        <div class="row">
+
+        <div class="col mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" id="password">
+          <div id="passHelp" class="form-text">La tua password deve avere dagli 8 ai 20 caratteri.</div>
+        </div>
+        <div class="col mb-3">
+            <label class="form-label">Conferma Password</label>
+            <input type="password" class="form-control">
+            
+          </div>
+
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Indirizzo</label>
+            <textarea class="form-control" id="indirizzo" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary ms-5">Inserisci</button>
+      </form>
+    
+   
+</div>
     
     </div>    
     
@@ -192,7 +186,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="script/script.js"></script>
+    <script src="script/script-form.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--

@@ -11,7 +11,6 @@ let listaOrdini = document.getElementById("listaOrdini");
 let filtraperOrdine = document.getElementById("filtraperOrdine");
 let filtraperCliente = document.getElementById("filtraperCliente");
 
-
 function selects(){  
     let ele=document.getElementsByName('checkbox');  
     for(var i=0; i<ele.length; i++){  
@@ -27,21 +26,8 @@ function deSelect(){
           
     }  
 }     
-function selects2(){  
-    let ele2=document.getElementsByName('checkbox2');  
-    for(var i=0; i<ele2.length; i++){  
-        if(ele2[i].type=='checkbox')  
-            ele2[i].checked=true;  
-    }  
-}  
-function deSelect2(){  
-    var ele2=document.getElementsByName('checkbox2');  
-    for(var i=0; i<ele2.length; i++){  
-        if(ele2[i].type=='checkbox')  
-            ele2[i].checked=false;  
-          
-    }  
-}  
+
+console.log("Script inizializzato");
 
 //search.addEventListener("click", window.alert(search.id));
 //login.addEventListener("click", window.alert(login.id));
@@ -54,3 +40,20 @@ function deSelect2(){
 //listaOrdini.addEventListener("click", window.alert(listaOrdini.id));
 //filtraperOrdine.addEventListener("click", window.alert(filtraperOrdine.id));
 //filtraperCliente..addEventListener("click", window.alert(filtraperCliente.id));
+
+window.addEventListener("load", () => {
+
+        //chiamo Postman
+        const base = "https://d765-87-8-204-239.eu.ngrok.io/cliente/lista";
+        
+        fetch(base)
+        
+            .then((response) => {
+            return console.log(response);
+            })
+                
+            });
+
+
+          
+
